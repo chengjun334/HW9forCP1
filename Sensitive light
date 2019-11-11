@@ -1,0 +1,21 @@
+int led = 13;
+void setup() {
+ Serial.begin(19200);
+ pinMode(A0, INPUT);
+pinMode(led, OUTPUT);
+}
+void loop() {
+ int value;
+ value = analogRead(A0);
+ Serial.println(value);
+ 
+if(value < 630){
+  digitalWrite(led, HIGH);
+}
+  if(value > 624){
+  digitalWrite(led, LOW);
+  
+}
+ }
+
+ 
